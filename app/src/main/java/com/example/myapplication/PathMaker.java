@@ -19,7 +19,6 @@ public class PathMaker {
 
     /**
      * Constructor for the PathMaker class.
-     *
      * @param scaler Scaling factor for the path
      * @param Array  Array of room indices
      */
