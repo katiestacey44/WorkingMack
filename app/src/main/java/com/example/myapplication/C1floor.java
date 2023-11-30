@@ -21,16 +21,16 @@ public class C1floor {
 
 
     public C1floor(){
-
+// do nothing
     }
     /**
      * Constructor for C1floor class.
      *
-     * @param scaleValr   Scaling factor for the path
+     * @param scaleVale   Scaling factor for the path
      * @param currRoom    Current room number
      * @param nextRoom    Destination room number
      */
-    public C1floor(float scaleValr,int currRoom, int nextRoom) {
+    public C1floor(float scaleVale,int currRoom, int nextRoom) {
         // Adjust room numbers to start from 0
         int currentRoom = currRoom - 100;
         int desiredRoom = nextRoom - 100;
@@ -42,7 +42,7 @@ public class C1floor {
         visitedArr = C1.getVisited();
 
         // Create PathMaker and obtain the navigation path
-        p = new PathMaker(scaleValr,visitedArr);
+        p = new PathMaker(scaleVale,visitedArr);
         path = p.getPath();
     }
 

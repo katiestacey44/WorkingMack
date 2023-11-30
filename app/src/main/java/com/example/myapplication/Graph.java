@@ -51,6 +51,14 @@ public class Graph {
 
     }
 
+    public int getDesiredRoom() {
+        return DesiredRoom;
+    }
+
+    public void setDesiredRoom(int desiredRoom) {
+        DesiredRoom = desiredRoom;
+    }
+
     /**
      * @param v vertex/room
      * @param w vertex/room
