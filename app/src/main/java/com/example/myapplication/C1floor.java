@@ -15,17 +15,22 @@ public class C1floor {
     private Path path;
 
 
+
     private Graph C1; // Graph representing the floor layout
 
+
+
+    public C1floor(){
+
+    }
     /**
      * Constructor for C1floor class.
      *
-     * @param scaleVale   Scaling factor for the path
+     * @param scaleValr   Scaling factor for the path
      * @param currRoom    Current room number
      * @param nextRoom    Destination room number
      */
-
-    public C1floor(float scaleVale,int currRoom, int nextRoom) {
+    public C1floor(float scaleValr,int currRoom, int nextRoom) {
         // Adjust room numbers to start from 0
         int currentRoom = currRoom - 100;
         int desiredRoom = nextRoom - 100;
@@ -37,7 +42,7 @@ public class C1floor {
         visitedArr = C1.getVisited();
 
         // Create PathMaker and obtain the navigation path
-        p = new PathMaker(scaleVale,visitedArr);
+        p = new PathMaker(scaleValr,visitedArr);
         path = p.getPath();
     }
 
@@ -126,6 +131,18 @@ public class C1floor {
         C1.addEdge(67, 54);
         C1.addEdge(67, 53);
 
+    }
+    public boolean check(int num){
+        boolean result = false;
+        int[] array = {110,112,104,102,106,114,120,125,126,127,130,124,123,121,122,132,133,140,144,146,145,143,142,141,154,153,152,151,150,148,149,157,156,155};
+
+        for (int i= 0; i < array.length; i++){
+            if (num == array[i]){
+                result = true;
+                break;
+            }
+        }
+        return result;
     }
 
 }
